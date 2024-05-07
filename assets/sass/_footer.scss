@@ -7,14 +7,13 @@ footer {
     flex-direction: column-reverse;
     gap: 50px;
 
-    padding: G.$yPadding G.$xPadding;
+    padding: calc(G.$yPadding*2) G.$xPadding;
     background: rgba(250, 250, 250, 1);
 
 }
 
 .footer {
     &__socialMedias {
-        gap: -10px;
         display: flex;
         align-items: center;
 
@@ -35,6 +34,18 @@ footer {
 
     &__about {
         flex: 0.8;
+
+        > * {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__brandDescription { @extend .text--dim; @extend .text--medium; }
+
+    &__copyright { 
+        @extend .text--dim; 
+        opacity: 50%;
+        transform: translateY(-45%);/* WORKAROUND SINCE THESE ASSETS HAS EXCESSIVE SPACE*/ 
     }
 }
 
@@ -45,6 +56,13 @@ footer {
         font-weight: bold;
         margin-bottom: 20px;
     }
+
+    &__menu { 
+        margin-bottom: 20px; 
+        > a {
+            @extend .text--dim;
+        }
+    }
 }
 
 @media (min-width: G.$breakpointDesktop) {
@@ -54,8 +72,14 @@ footer {
         padding-bottom: G.$yPadding;
     }
 
-    .footer__navGroups {
-        flex-direction: row;
-        justify-content: space-between;
+    .footer {
+        &__navGroups {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__brandDescription {
+            width: 70%;
+        }
     }
 }

@@ -71,6 +71,7 @@
     }
 
     &__body {
+        @extend .text--medium;
         &::before { content: "\""; }
         &::after { content: "\"."; }
     }
