@@ -20,7 +20,7 @@
 }
 
 /* BREAKPOINTS */
-.text--dim, .subscription__about > p, .testimony__location, .coverage > p, .plan > p, .perk > p, .stats__metric, .hero__about > p {
+.text--dim, .footer__brandDescription, .footer__copyright, .subscription__about > p, .review > p, .testimony__location, .coverage > p, .plan > p, .perk > p, .stats__metric, .hero__about > p {
   color: rgb(79, 86, 101);
 }
 
@@ -28,7 +28,7 @@
   font-size: 14px;
 }
 
-.text--medium, .subscription__about > p, .hero__about > p {
+.text--medium, .footer__brandDescription, .subscription__about > p, .hero__about > p {
   font-size: 16px;
 }
 
@@ -345,6 +345,9 @@ header {
 }
 
 @media (min-width: 768px) {
+  .companies {
+    padding: 50px 150px;
+  }
   .company__logo {
     width: 140px;
     height: 105px;
@@ -464,6 +467,7 @@ header {
 }
 .subscription__about > h2 {
   margin: auto;
+  margin-bottom: 10px;
   width: 20ch;
   font-size: 30px;
 }
@@ -513,10 +517,15 @@ footer {
 .footer__about {
   flex: 0.8;
 }
-
+.footer__about > * {
+  margin-bottom: 20px;
+}
 .navGroup > p {
   font-weight: bold;
   margin-bottom: 20px;
+}
+.navGroup__menu {
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -529,8 +538,12 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
+  .footer__brandDescription {
+    width: 70%;
+  }
 }
 * {
+  font-family: rubik;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
