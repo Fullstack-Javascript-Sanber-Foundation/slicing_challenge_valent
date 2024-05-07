@@ -20,7 +20,7 @@
 }
 
 /* BREAKPOINTS */
-.text--dim, .footer__brandDescription, .footer__copyright, .subscription__about > p, .review > p, .testimony__location, .coverage > p, .plan > p, .perk > p, .stats__metric, .hero__about > p {
+.text--dim, .footer__brandDescription, .footer__copyright, .navGroup__menu > a, .subscription__about > p, .review > p, .testimony__location, .coverage > p, .plan > p, .perk > p, .stats__metric, .hero__about > p {
   color: rgb(79, 86, 101);
 }
 
@@ -52,7 +52,7 @@ p {
   border: 1px solid rgb(245, 56, 56);
 }
 
-.outline--dim, .package {
+.outline--dim, .review__testimonies > :nth-child(n+2), .package {
   border: 1px solid lightgrey;
 }
 
@@ -375,7 +375,6 @@ header {
 .review__testimonies > * {
   flex: 1;
 }
-
 .testimony {
   text-align: left;
   border-width: 2px;
@@ -498,7 +497,6 @@ footer {
 }
 
 .footer__socialMedias {
-  gap: -10px;
   display: flex;
   align-items: center;
 }
@@ -520,14 +518,18 @@ footer {
 .footer__about > * {
   margin-bottom: 20px;
 }
+.footer__copyright {
+  opacity: 50%;
+  transform: translateY(-45%); /* WORKAROUND SINCE THESE ASSETS HAS EXCESSIVE SPACE*/
+}
+
 .navGroup > p {
   font-weight: bold;
   margin-bottom: 20px;
 }
 .navGroup__menu {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-
 @media (min-width: 768px) {
   footer {
     flex-direction: row;

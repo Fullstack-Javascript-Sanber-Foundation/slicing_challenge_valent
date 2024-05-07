@@ -8,6 +8,8 @@
     padding: G.$yPadding G.$xPadding;
 
 
+
+    > p { @extend .text--dim; }
     > h2 { font-size: 28px; }
     > * { margin-bottom: 40px; }
 
@@ -21,6 +23,11 @@
         }
         
         > * { flex: 1; }
+
+        > :nth-child(n + 2) {
+            @extend .outline--dim;
+        }
+
     }
 }
 
