@@ -7,7 +7,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
-    row-gap: 30px;
+    gap: 30px 20px;
+    margin-bottom: 200px;
 }
 
 .company {
@@ -31,6 +32,12 @@
 }
 
 @media (min-width: G.$breakpointDesktop) {
+    .companies {
+        padding: G.$yPadding--desktop G.$xPadding--desktop;
+        column-gap: 0px;
+        margin-bottom: 0px;
+    }
+
     .company {
         &__logo {
             width: 140px;
