@@ -1,0 +1,40 @@
+@use "__globals" as G;
+
+.companies {
+    position: relative;
+    text-align: center;
+    padding: G.$yPadding G.$xPadding;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    row-gap: 30px;
+}
+
+.company {
+    flex: 1;
+    align-items: center;
+
+    &__logo {
+        margin: auto;
+        position: relative;
+        width: 95px;
+        height: 30px;
+
+        > img {
+            width: inherit;
+            position: absolute;
+            top: 50%;
+            left: 50%; right: 0%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media (min-width: G.$breakpointDesktop) {
+    .company {
+        &__logo {
+            width: 140px;
+            height: 105px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use "__globals" as G;
+
+header {
+    padding: G.$yPadding G.$xPadding;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav,
+.header__auth {
+    display: none;
+}
+
+.header__nav--collapse {
+    display: block;
+}
+
+@media (min-width: G.$breakpointDesktop) {
+    header {
+        padding: G.$yPadding--desktop G.$xPadding--desktop;
+    }
+
+    .header__nav,
+    .header__auth {
+        display: block;
+    }
+
+    .header__nav--collapse {
+        display: none;
+    }
+}

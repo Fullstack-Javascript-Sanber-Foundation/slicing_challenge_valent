@@ -1,0 +1,34 @@
+@use "__globals" as G;
+@use "./components/_text" as TEXT;
+
+.hero {
+    padding: G.$yPadding G.$xPadding;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero__about {
+    text-align: center;
+
+    > * {
+        margin-bottom: 20px;
+    }
+
+    > p {
+        @extend .text--dim;
+        @extend .text--medium;
+    }
+
+    > button {
+        width: 250px;
+        height: 60px;
+    }
+}
+
+@media (min-width: G.$breakpointDesktop) {
+    .hero__about {
+        text-align: left;
+    }
+}
