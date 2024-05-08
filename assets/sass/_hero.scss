@@ -7,6 +7,20 @@
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 80px;
+
+    &__image {
+        flex: 1;
+    }
+
+    &__about {
+        flex: 1;
+
+        > * {
+            margin-bottom: 20px;
+        }
+    }
+
 }
 
 .hero__about {
@@ -28,7 +42,25 @@
 }
 
 @media (min-width: G.$breakpointDesktop) {
-    .hero__about {
-        text-align: left;
+    .hero {
+        padding: G.$yPadding--desktop G.$xPadding--desktop;
+        align-items: center;
+        justify-content: space-between;
+
+        &__image {
+            > img {
+                margin-left: auto;
+                width: 90%;
+            }
+            flex: 1;
+        }
+
+        &__about {
+            text-align: left;
+
+            > h1 {
+                font-size: 50px;
+            }
+        }
     }
 }
