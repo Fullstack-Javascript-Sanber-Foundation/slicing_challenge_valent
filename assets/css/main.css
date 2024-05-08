@@ -20,7 +20,7 @@
 }
 
 /* BREAKPOINTS */
-.text--dim, .footer__brandDescription, .footer__copyright, .navGroup__menu > a, .subscription__about > p, .review > p, .testimony__location, .coverage > p, .plan > p, .perk > p, .stats__metric, .hero__about > p {
+.text--dim, .footer__brandDescription, .footer__copyright, .navGroup__menu > a, .subscription__about > p, .review > p, .testimony__location, .coverage > p, .plan > p, .perk > p, .features__about > p, .feature__item, .stats__metric, .hero__about > p {
   color: rgb(79, 86, 101);
 }
 
@@ -80,21 +80,38 @@ button {
 header {
   padding: 25px 25px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
+  align-items: center;
 }
 
-.header__nav,
-.header__auth {
+.header__nav, .header__auth {
   display: none;
 }
-
+.header__auth > button {
+  width: 150px;
+  height: 45px;
+}
 .header__nav--collapse {
   display: block;
+}
+
+.nav__menu > a {
+  color: rgb(79, 86, 101);
+}
+.nav__menu > a :hover {
+  color: rgb(245, 56, 56);
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
   header {
     padding: 50px 150px;
+  }
+  .nav__menuList {
+    display: flex;
+    gap: 40px;
   }
   .header__nav,
   .header__auth {
@@ -110,6 +127,16 @@ header {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: 80px;
+}
+.hero__image {
+  flex: 1;
+}
+.hero__about {
+  flex: 1;
+}
+.hero__about > * {
+  margin-bottom: 20px;
 }
 
 .hero__about {
@@ -124,8 +151,23 @@ header {
 }
 
 @media (min-width: 768px) {
+  .hero {
+    padding: 50px 150px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero__image {
+    flex: 1;
+  }
+  .hero__image > img {
+    margin-left: auto;
+    width: 90%;
+  }
   .hero__about {
     text-align: left;
+  }
+  .hero__about > h1 {
+    font-size: 50px;
   }
 }
 .stats {
@@ -186,7 +228,6 @@ header {
 .features__about > * {
   margin-bottom: 20px;
 }
-
 .feature__item {
   display: flex;
   justify-content: center;
@@ -197,7 +238,26 @@ header {
 
 @media (min-width: 768px) {
   .features {
-    padding: 50px 150px;
+    gap: 20px;
+    align-items: center;
+    display: flex;
+    text-align: left;
+    padding: 150px 150px;
+  }
+  .features__image > img {
+    width: 90%;
+  }
+  .features__about h2 {
+    font-size: 35px;
+  }
+  .features > * {
+    flex: 1;
+  }
+  .feature__item {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 }
 .plan {
